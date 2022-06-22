@@ -1,0 +1,181 @@
+/*fuente importada*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    /*colores primarios*/
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-bright-blue: hsl(245, 75%, 52%);
+    /*colores neutrales*/
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+    --color-blanco: hsl(0, 0%, 100%);
+    /*Tamaño parrafo*/
+    --font-size-paragraph: 16px;
+    /*fuente*/
+    --principal-font-family: 'Red Hat Display', sans-serif;
+}
+
+/*----base----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--principal-font-family);
+    font-size: var(--font-size-paragraph);
+    background: url('images/pattern-background-desktop.svg') no-repeat;
+    background-size: contain;
+    background-color: var(--color-pale-blue);color: var(--color-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.tarjeta{
+    width: 350px;
+    height: 550px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 50px -10px rgb(200 200 200);
+}
+
+.body-tarjeta{
+    padding: 1.5em 2em;
+}
+
+.head_tarjeta img{
+    width: 100%;
+}
+
+.body-text{
+    text-align: center;
+}
+
+.body-text h1{
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: .7rem;
+}
+
+.body-text p{
+    font-size: .9rem;
+    color: var(--color-desaturated-blue);
+    width: 100%;
+    margin-bottom: 1.7rem;
+}
+
+.datos_plan_valor{
+    background-color: var(--color-very-pale-blue);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    height: 75px;
+    margin-bottom: 1.5rem;
+}
+
+.datos_plan_valor img{
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.datos_plan_valor-musica-datos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.datos_plan_anual-price h2{
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.datos_plan_anual-price p{
+    color: var(--color-desaturated-blue);
+    font-size: .9rem;
+}
+
+.datos_plan-cambio a{
+    font-size: .8rem;
+    font-weight: 700;color: var(--color-bright-blue);
+    transition: .2s ease-in-out all;
+}
+
+.datos_plan-cambio a:hover{
+    color: rgb(101, 90, 212);
+    text-decoration: none;
+    transition: .2s ease-in-out all;
+}
+
+.botones_tarjeta{
+    width: 100%;
+    height: 90px;display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton_payment{
+    width: 100%;
+}
+
+.body-tarjeta .botones_tarjeta a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: .8rem;
+    color: var(--color-desaturated-blue);
+    font-weight: 800;
+    transition: .2s ease-in-out all;
+}
+
+.body-tarjeta .botones_tarjeta a:hover{
+    color: hsl(224deg 29% 43%);
+    text-decoration: none;
+    transition: .2s ease-in-out all;
+}
+
+.body-tarjeta .botones_tarjeta button:hover{
+    color: var(--color-blanco);
+    background-color: rgb(101, 90, 212);
+    transition: .2s ease-in-out all;
+}
+
+.body-tarjeta .botones_tarjeta button{
+    width: 100%;
+    border: none;
+    background-color: var(--color-bright-blue);
+    color: var(--color-blanco);
+    font-weight: 700;
+    padding: .8rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 12px 20px -2px rgb(186 204 215);
+    transition: .2s ease-in-out all;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 375px){
+    .tarjeta{
+        width: 90%;
+    }
+
+    body{
+        background: url('images/pattern-background-mobile.svg') no-repeat;
+    background-color: var(--color-pale-blue);}
+}
